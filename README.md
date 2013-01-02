@@ -1,18 +1,18 @@
-# generics.js #
-## overview ##
-Sometimes it makes sense to have stricly typed collections in javascript, but not have to hardcode the types you're checking for. I've just started experimenting with elegant ways to do this.
-## example ##
+# Generics.js #
+## Overview ##
+Sometimes it makes sense to have stricly typed collections in javascript, but not if you have to hardcode the types you're checking for. I've just started experimenting with elegant ways to do this.
+## Example ##
 ``` javascript
-function Crazy (a) { 
+function Thing (a) { 
   this.a = a;
 } 
 
-var crazies = new GenericArray(Crazy);
+var things = new GenericArray(Crazy);
 
-crazies.add(new Crazy('this'));
-crazies.add(new Crazy('that'));
-crazies.get(1); // returns a crazy object where a is 'that'
-crazies.length // returns 2
-crazies.add({a : 'anything'}); //throws an error
+things.add(new Thing('this'));
+things.add(new Thing('that'));
+things.get(1); // returns a Thing where a is 'that'
+things.length // returns 2
+things.add({a : 'anything'}); //throws an error
 
 ```
