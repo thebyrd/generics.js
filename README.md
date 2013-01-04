@@ -7,7 +7,7 @@ function Thing (a) {
   this.a = a;
 } 
 
-var things = new GenericArray(Crazy);
+var things = new GenericArray(Thing);
 
 things.add(new Thing('this'));
 things.add(new Thing('that'));
