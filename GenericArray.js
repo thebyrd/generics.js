@@ -8,7 +8,7 @@ var GenericArray = function (T) {
       elements = [];
 
   // public instance variables
-  this.length = elements.length;
+  this.length = 0;
 
   // private methods
   function isOfType (element) {
@@ -19,6 +19,7 @@ var GenericArray = function (T) {
   this.add = function (element, index) {
     if (isOfType(element)) {
       index ? elements.insert(index, element) : elements.push(element);
+      this.length++;
     } else {
       throw new Error("Element is not of type " + type);
     }
@@ -29,6 +30,7 @@ var GenericArray = function (T) {
   };
 
   this.pop = function () {
+    this.length--;
     return elements.pop();
   };
 };
