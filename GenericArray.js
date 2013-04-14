@@ -8,7 +8,7 @@ var GenericArray = function (T) {
       elements = [];
 
   // public instance variables
-  this.length = elements.length;
+  this.length = function () { return elements.length };
 
   // private methods
   function isOfType (element) {
