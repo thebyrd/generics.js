@@ -12,7 +12,7 @@ var things = new GenericArray(Thing);
 things.add(new Thing('this'));
 things.add(new Thing('that'));
 things.get(1); // returns a Thing where a is 'that'
-things.length // returns 2
+things.length() // returns 2
 things.add({a : 'anything'}); //throws an error
 
 ```
