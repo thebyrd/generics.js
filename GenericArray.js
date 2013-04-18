@@ -1,14 +1,11 @@
 var GenericArray = function (T) {
 
   // validation
-  if (!T) throw "T is a required field";
+  if (!T) throw "A type is required for this array.";
 
   // private instance variables
   var type = T,
       elements = [];
-
-  // public instance variables
-  this.length = function () { return elements.length };
 
   // private methods
   function isOfType (element) {
@@ -16,6 +13,10 @@ var GenericArray = function (T) {
   }
 
   //public methods
+  this.size = function () { 
+    return elements.length 
+  };
+  
   this.add = function (element, index) {
     if (isOfType(element)) {
       index ? elements.insert(index, element) : elements.push(element);
